@@ -1,0 +1,7 @@
+<launch>
+    <param name="/use_sim_time" value="true"/>
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find metric_test)/worlds/pedestrians_dense.world" />
+        <!-- <arg name="debug" value="true" /> -->
+    </include>
+</launch>
