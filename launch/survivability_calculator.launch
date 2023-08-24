@@ -1,0 +1,12 @@
+<launch>
+    
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find metric_test)/worlds/pedestrians_dense.world" />
+        <!-- <arg name="debug" value="true" /> -->
+    </include>
+    <node name="metric_test_node" pkg="metric_test" type="metric_test_node" output="screen">
+        <!-- <arg name="map_bounds" value="{-2, 23, -7, 7}" /> -->
+        <!-- <arg name="map_bounds" value="{-2, 23, -7, 7}" /> -->
+    </node>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find metric_test)/visual.rviz" required="true" />
+</launch>
